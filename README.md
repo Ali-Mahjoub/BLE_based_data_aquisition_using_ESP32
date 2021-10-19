@@ -10,6 +10,7 @@
       <ul>
         <li><a href="#introduction-to-ble">Introduction to BLE</a></li>
         <li><a href="#ble-structure">BLE Structure</a></li>
+        <li><a href="#connection-procedure">Connection procedure</a></li>
       </ul>
     </li>       
     <li><a href="#code">Code</a></li>
@@ -48,10 +49,17 @@ BLE data is transmitted and received in very small packages, a BLE packet is of 
 
 ![results_1](https://doc.qt.io/archives/qt-5.5/images/peripheral-structure.png)
 
+### Connection procedure
+
+This schema represents multiple phases that the server and client devices go through to establish a connection and exchange data
+
+![results_1](https://github.com/Ali-Mahjoub/BLE_based_data_aquisition_using_ESP32/blob/main/Images/BLE%20Connection%20procedure.PNG)
 
 ## Code
+
 ### Implementation
-- This was a quite big annoying introduction to the BLE protocol (Yeah I know) so let's set a practical example to wrap this up and understand things while programming.
+
+- This was a quite big annoying introduction to the BLE protocol (Yeah I know) so let's set a practical example to cover this up and understand things while programming.
 
 - As i mentionned in the introduction, we will set the ESP32 board as a BLE device (SERVER) to send the DHT11 sensor data(Temperature) to an other BLE device (CLIENT).In this case
 ,i will use my phone as the client and connect it to the ESP32 and we will receive the data using a mobile app that supports BLE devices to interact with the server called BLE Scanner.
@@ -60,6 +68,7 @@ BLE data is transmitted and received in very small packages, a BLE packet is of 
 **Algorithm Structure**
 
   -The algorithm for the BLE server follows the explanation during the introduction above. We start by creating a BLE Service, after which we create BLE Characteristics under that service and a BLE descriptor under the characteristics. We then Start the service and start advertising so the device is visible to Scanning BLE devices.
+  
   
 -->We start the sketch by importing libraries that are required for the code.
 ```c
