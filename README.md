@@ -37,8 +37,10 @@
 
 - BLE uses a hierarchical data structure to send and receive information. A BLE device acting as a server will advertise services and characteristics that can be detected by a client and once the information exchange is successful, BLE devices can communicate with each other simultaneously. In technical terms, this information stack all together is known as an attribute of a BLE device. And it's defined and implemented using the GATT (Generic Attributes) profile. In these Profiles, we have Service, Characteristics, and values in a hierarchical order. Services contain characteristics and the characteristic contains the value, by reading the characteristic, we can read the values and values changes over time.
 
+<p align="center">
+  <img src="https://infocenter.nordicsemi.com/topic/sds_s140/SDS/s1xx/Images/bt_stack_arch_s132_s140.svg">
+</p>
 
-![results_1](https://infocenter.nordicsemi.com/topic/sds_s140/SDS/s1xx/Images/bt_stack_arch_s132_s140.svg)
 
 
 Characteristics can be processed to include read or write information. Devices containing read components can publish information and devices which contain write characteristics can receive data from a client.
@@ -47,13 +49,19 @@ The GATT profile under which the services and characteristics are defined is kno
 
 BLE data is transmitted and received in very small packages, a BLE packet is of only 31 bytes in total when a TCP packet is of 60 bytes or more. Finally, one important thing to remember is that a BLE packet needs to be structured properly which can then be serialized and deserialized consistently in both the server and the client end. 
 
-![results_1](https://doc.qt.io/archives/qt-5.5/images/peripheral-structure.png)
+<p align="center">
+  <img src="https://doc.qt.io/archives/qt-5.5/images/peripheral-structure.png">
+</p>
+
 
 ### Connection procedure
 
 This schema represents multiple phases that the server and client devices go through to establish a connection and exchange data
 
-![results_1](https://github.com/Ali-Mahjoub/BLE_based_data_aquisition_using_ESP32/blob/main/Images/BLE%20Connection%20procedure.PNG)
+<p align="center">
+  <img src="https://github.com/Ali-Mahjoub/BLE_based_data_aquisition_using_ESP32/blob/main/Images/BLE%20Connection%20procedure.PNG">
+</p>
+
 
 ## Code
 
@@ -211,11 +219,14 @@ void loop() {
 ```
 ## Test and Results
 ![results_1](https://github.com/Ali-Mahjoub/azer/blob/main/Images/ESP_DHT11.jpg)
-![results_1](https://github.com/Ali-Mahjoub/azer/blob/main/Images/Data%20received.jpg)
+<p align="center">
+  <img src="https://github.com/Ali-Mahjoub/azer/blob/main/Images/Data%20received.jpg">
+</p>
 
-  ## Conclusion:
+## Conclusion:
 I impelemented through this snippet of code a simple ESP32 BLE server that sends data to my phone (BLE client) using a moblie app (BLE Scanner)and turns a warning led on when there is an overheat .
-  ### Contact:
+
+### Contact:
 * Mail : ali.mahjoub1998@gmail.com 
 * Linked-in profile: https://www.linkedin.com/in/ali-mahjoub-b83a86196/
 
